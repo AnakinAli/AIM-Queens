@@ -38,9 +38,12 @@ namespace AIM_Queens.GameLogic
                 Console.ForegroundColor = ConsoleColor.Green;
                 animation.TextAnimation($"ID: {winner.Id} {winner.Name} ", 250);
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.White;
 
+                //End program
+                Console.ForegroundColor = ConsoleColor.Red;
+                Thread.Sleep(2000);
                 Environment.Exit(0);
+
             }
             string input = "";
 
