@@ -11,7 +11,7 @@ namespace AIM_Queens.GameLogic
     {
         private string copyright = "Copyright AIM | AZ-MOGA.BG | Anakin's Fix";
 
-        private int gameMode = 0; // singleplayer
+        public int gameMode = 0; // singleplayer
 
         public int ErrorTimeSuspense = 80;
         public int LineLoadingSpeed = 1;
