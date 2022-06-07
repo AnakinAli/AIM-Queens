@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameLogic\Animation.cs" />
+    <Compile Include="GameLogic\Bot.cs" />
     <Compile Include="GameLogic\Game.cs" />
     <Compile Include="GameLogic\Map.cs" />
     <Compile Include="GameLogic\Player.cs" />

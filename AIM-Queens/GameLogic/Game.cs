@@ -10,6 +10,7 @@ namespace AIM_Queens.GameLogic
     internal class Game
     {
         private Animation animation = new Animation();
+        private Random random = new Random();
 
         public void WelcomeScreen()
         {
@@ -41,13 +42,20 @@ namespace AIM_Queens.GameLogic
 
                 Environment.Exit(0);
             }
-
+            string input = "";
 
             Console.WriteLine($"\n[Player: {currentPlayer.Name}]");
             Console.WriteLine($"Choose coordinates (1,5|1x5)...: ");
-
+            //Check if game is singleplayer and its bot's turn
+            if (animation.gameMode == 0 && currentPlayer.Id == 2)
+            {
+                Bot bot = new Bot();
+                input = bot.GetRandomCoordinate(random);
+                Console.WriteLine(input);
+                Thread.Sleep(1000);
+            }
             // Validate input
-            var validatedInput = Validation.ValidateCoordinates(Console.ReadLine());
+            var validatedInput = Validation.ValidateCoordinates(input == "" ? Console.ReadLine() : input);
 
             //Has Error
             if (validatedInput == null)
